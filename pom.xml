@@ -15,7 +15,7 @@
 		<javaee-api>8.0.1</javaee-api>
 		<maven-compiler-plugin>3.8.1</maven-compiler-plugin>
 		<maven-source-plugin>3.2.1</maven-source-plugin>
-		<maven-javadoc-plugin>3.1.1</maven-javadoc-plugin>
+		<maven-javadoc-plugin>3.2.0</maven-javadoc-plugin>
 		<maven-gpg-plugin>1.6</maven-gpg-plugin>
 		<maven-resources-plugin>3.1.0</maven-resources-plugin>
 		<maven-jar-plugin>3.2.0</maven-jar-plugin>
@@ -174,7 +174,7 @@
 				</repository>
 			</distributionManagement>
 			<build>
-				<plugins> 
+				<plugins>
 					<plugin>
 						<groupId>org.apache.maven.plugins</groupId>
 						<artifactId>maven-javadoc-plugin</artifactId>
