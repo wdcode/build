@@ -2,16 +2,17 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.weicoder</groupId>
 	<artifactId>build</artifactId>
-	<version>1.3</version>
+	<version>1.4</version>
 	<packaging>pom</packaging>
 	<name>wdcode</name>
 	<description>java tools</description>
 	<url>https://github.com/wdcode</url>
 
 	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<encoding>UTF-8</encoding>
 		<jdk>11</jdk>
+		<project.build.sourceEncoding>${encoding}</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>${encoding}</project.reporting.outputEncoding> 
 		<javaee-api>8.0.1</javaee-api>
 		<maven-compiler-plugin>3.8.1</maven-compiler-plugin>
 		<maven-source-plugin>3.2.1</maven-source-plugin>
@@ -82,7 +83,7 @@
 					<compilerArgument>-parameters</compilerArgument>
 					<source>${jdk}</source>
 					<target>${jdk}</target>
-					<encoding>UTF-8</encoding>
+					<encoding>${encoding}</encoding>
 				</configuration>
 			</plugin>
 			<plugin>
@@ -118,6 +119,9 @@
 								<resource>
 									<directory>src/main/java</directory>
 									<filtering>true</filtering>
+									<excludes>
+										<exclude>**/*.java</exclude>
+									</excludes>
 								</resource>
 								<resource>
 									<directory>src/main/resources</directory>
