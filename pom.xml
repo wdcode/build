@@ -138,6 +138,7 @@
 				<version>${versions-maven-plugin}</version>
 				<configuration>
 					<generateBackupPoms>false</generateBackupPoms>
+					<processAllModules>true</processAllModules>
 				</configuration>
 			</plugin>
 			<plugin>
