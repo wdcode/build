@@ -1,1 +1,1 @@
-mvn clean install deploy -Prelease
+mvn -T8 clean install deploy -Prelease
