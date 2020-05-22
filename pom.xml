@@ -2,7 +2,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.weicoder</groupId>
 	<artifactId>build</artifactId>
-	<version>1.5</version>
+	<version>1.6</version>
 	<packaging>pom</packaging>
 	<name>wdcode</name>
 	<description>java tools</description>
@@ -10,12 +10,13 @@
 
 	<properties>
 		<encoding>UTF-8</encoding>
-		<jetty.port>80</jetty.port>
+		<jetty.port>8080</jetty.port>
 		<jdk>11</jdk>
 		<project.build.sourceEncoding>${encoding}</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>${encoding}</project.reporting.outputEncoding>
-		<javaee-api>8.0.1</javaee-api>
 		<jetty-maven-plugin>9.4.28.v20200408</jetty-maven-plugin>
+		<javax.annotation>1.3.2</javax.annotation>
+		<javaee-api>8.0.1</javaee-api> 
 		<maven-compiler-plugin>3.8.1</maven-compiler-plugin>
 		<maven-source-plugin>3.2.1</maven-source-plugin>
 		<maven-javadoc-plugin>3.2.0</maven-javadoc-plugin>
@@ -291,6 +292,13 @@
 					</plugins>
 				</pluginManagement>
 			</build>
+			<dependencies>
+				<dependency>
+					<groupId>javax.annotation</groupId>
+					<artifactId>javax.annotation-api</artifactId>
+					<version>${javax.annotation}</version>
+				</dependency>
+			</dependencies>
 		</profile>
 		<profile>
 			<id>release</id>
