@@ -14,7 +14,7 @@
 		<jdk>11</jdk>
 		<project.build.sourceEncoding>${encoding}</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>${encoding}</project.reporting.outputEncoding>
-		<jetty-maven-plugin>9.4.28.v20200408</jetty-maven-plugin>
+		<jetty-maven-plugin>9.4.29.v20200521</jetty-maven-plugin>
 		<javax.annotation>1.3.2</javax.annotation>
 		<javaee-api>8.0.1</javaee-api> 
 		<maven-compiler-plugin>3.8.1</maven-compiler-plugin>
