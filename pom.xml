@@ -31,7 +31,7 @@
 		<maven-clean-plugin>3.1.0</maven-clean-plugin>
 		<maven-install-plugin>2.5.2</maven-install-plugin>
 		<versions-maven-plugin>2.7</versions-maven-plugin>
-		<nexus-staging-maven-plugin>1.6.8</nexus-staging-maven-plugin>
+		<nexus-staging-maven-plugin>1.6.8</nexus-staging-maven-plugin> 
 	</properties>
 
 	<licenses>
@@ -470,5 +470,5 @@
 			<version>${lombok}</version>
 			<optional>true</optional>
 		</dependency>
-	</dependencies>
+	</dependencies> 
 </project>
