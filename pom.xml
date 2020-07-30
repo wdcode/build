@@ -16,7 +16,7 @@
 		<project.reporting.outputEncoding>${encoding}</project.reporting.outputEncoding>
 		<jetty-maven-plugin>9.4.30.v20200611</jetty-maven-plugin>
 		<lombok>1.18.12</lombok>
-		<smart-doc-maven-plugin>1.1.0</smart-doc-maven-plugin>
+		<smart-doc-maven-plugin>1.1.3</smart-doc-maven-plugin>
 		<javax.annotation>1.3.2</javax.annotation>
 		<javaee-api>8.0.1</javaee-api> 
 		<maven-compiler-plugin>3.8.1</maven-compiler-plugin>
@@ -25,7 +25,7 @@
 		<maven-gpg-plugin>1.6</maven-gpg-plugin>
 		<maven-resources-plugin>3.1.0</maven-resources-plugin>
 		<maven-jar-plugin>3.2.0</maven-jar-plugin>
-		<maven-war-plugin>3.3.0</maven-war-plugin>
+		<maven-war-plugin>3.3.1</maven-war-plugin>
 		<maven-dependency-plugin>3.1.2</maven-dependency-plugin>
 		<maven-surefire-plugin>2.22.2</maven-surefire-plugin>
 		<maven-clean-plugin>3.1.0</maven-clean-plugin>
