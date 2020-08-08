@@ -2,7 +2,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.weicoder</groupId>
 	<artifactId>build</artifactId>
-	<version>1.7</version>
+	<version>1.8</version>
 	<packaging>pom</packaging>
 	<name>wdcode</name>
 	<description>java tools</description>
@@ -14,16 +14,17 @@
 		<jdk>11</jdk>
 		<project.build.sourceEncoding>${encoding}</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>${encoding}</project.reporting.outputEncoding>
-		<jetty-maven-plugin>9.4.30.v20200611</jetty-maven-plugin>
-		<lombok>1.18.12</lombok>
-		<smart-doc-maven-plugin>1.1.3</smart-doc-maven-plugin>
-		<javax.annotation>1.3.2</javax.annotation>
 		<javaee-api>8.0.1</javaee-api> 
+		<jetty-maven-plugin>9.4.31.v20200723</jetty-maven-plugin>
+		<lombok>1.18.12</lombok>
+		<smart-doc-maven-plugin>1.1.4</smart-doc-maven-plugin>  
 		<maven-compiler-plugin>3.8.1</maven-compiler-plugin>
 		<maven-source-plugin>3.2.1</maven-source-plugin>
 		<maven-javadoc-plugin>3.2.0</maven-javadoc-plugin>
 		<maven-gpg-plugin>1.6</maven-gpg-plugin>
 		<maven-resources-plugin>3.1.0</maven-resources-plugin>
+		<maven-assembly-plugin>3.3.0</maven-assembly-plugin>
+		<maven-shade-plugin>3.2.4</maven-shade-plugin>
 		<maven-jar-plugin>3.2.0</maven-jar-plugin>
 		<maven-war-plugin>3.3.1</maven-war-plugin>
 		<maven-dependency-plugin>3.1.2</maven-dependency-plugin>
@@ -234,43 +235,7 @@
 					</execution>
 				</executions>
 			</plugin>
-		</plugins>
-		<pluginManagement>
-			<plugins>
-				<!--This plugin's configuration is used to store Eclipse m2e settings 
-					only. It has no influence on the Maven build itself. -->
-				<plugin>
-					<groupId>org.eclipse.m2e</groupId>
-					<artifactId>lifecycle-mapping</artifactId>
-					<version>1.0.0</version>
-					<configuration>
-						<lifecycleMappingMetadata>
-							<pluginExecutions>
-								<pluginExecution>
-									<pluginExecutionFilter>
-										<groupId>
-											com.github.shalousun
-										</groupId>
-										<artifactId>
-											smart-doc-maven-plugin
-										</artifactId>
-										<versionRange>
-											[${smart-doc-maven-plugin},)
-										</versionRange>
-										<goals>
-											<goal>html</goal>
-										</goals>
-									</pluginExecutionFilter>
-									<action>
-										<ignore></ignore>
-									</action>
-								</pluginExecution>
-							</pluginExecutions>
-						</lifecycleMappingMetadata>
-					</configuration>
-				</plugin>
-			</plugins>
-		</pluginManagement>
+		</plugins> 
 	</build>
 
 	<profiles>
@@ -334,6 +299,37 @@
 							</execution>
 						</executions>
 					</plugin>
+				</plugins>
+			</build> 
+		</profile> 
+		<profile>
+			<id>assembly</id>
+			<build>
+				<plugins>
+					<plugin>  
+						<groupId>org.apache.maven.plugins</groupId>  
+						<artifactId>maven-assembly-plugin</artifactId>  
+						<version>${maven-assembly-plugin}</version>  
+						<configuration>  
+							<archive>  
+								<manifest>  
+									<mainClass>com.weicoder.common.Main</mainClass>  
+								</manifest>  
+							</archive>  
+							<descriptorRefs>  
+								<descriptorRef>jar-with-dependencies</descriptorRef>  
+							</descriptorRefs>  
+						</configuration>  
+						<executions>  
+							<execution>  
+								<id>make-assembly</id>  
+								<phase>package</phase>  
+								<goals>  
+									<goal>single</goal>  
+								</goals>  
+							</execution> 
+						</executions>  
+					</plugin>  
 				</plugins>
 			</build> 
 		</profile>
@@ -402,47 +398,33 @@
 				<dependency>
 					<groupId>com.weicoder</groupId>
 					<artifactId>tomcat</artifactId>
-				</dependency>
-				<dependency>
-					<groupId>javax.annotation</groupId>
-					<artifactId>javax.annotation-api</artifactId>
-					<version>${javax.annotation}</version>
-				</dependency>
+				</dependency> 
 			</dependencies>
 			<build>
 				<plugins>
-					<plugin>
-						<groupId>org.apache.maven.plugins</groupId>
-						<artifactId>maven-war-plugin</artifactId>
-						<version>${maven-war-plugin}</version>
-						<configuration>
-							<failOnMissingWebXml>false</failOnMissingWebXml>
-							<archive>
-								<manifest>
-									<addClasspath>true</addClasspath>
-									<classpathPrefix>WEB-INF/lib/</classpathPrefix>
-									<mainClass>com.weicoder.tomcat.Main</mainClass>
-								</manifest>
-							</archive>
-						</configuration>
-					</plugin>  
-					<plugin>
-						<groupId>org.apache.maven.plugins</groupId>
-						<artifactId>maven-dependency-plugin</artifactId>
-						<version>${maven-dependency-plugin}</version> 
-						<executions>
-							<execution>
-								<id>copy</id>
-								<phase>compile</phase>
-								<goals>
-									<goal>copy-dependencies</goal>
-								</goals>
-								<configuration>
-									<outputDirectory>${project.build.directory}/WEB-INF/lib/</outputDirectory>
-								</configuration>
-							</execution>
-						</executions>
-					</plugin>
+					 <plugin>  
+						<groupId>org.apache.maven.plugins</groupId>  
+						<artifactId>maven-shade-plugin</artifactId>  
+						<version>${maven-shade-plugin}</version>  
+						<executions>  
+							<execution>  
+								<phase>package</phase>  
+								<goals>  
+									<goal>shade</goal>  
+								</goals>  
+								<configuration>  
+									<transformers>  
+										<transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">  
+											<mainClass>com.weicoder.tomcat.Main</mainClass>  
+										</transformer>  
+										 <transformer implementation="org.apache.maven.plugins.shade.resource.AppendingTransformer">  
+											<resource>**/*</resource>  
+										</transformer> 
+									</transformers>  
+								</configuration>  
+							</execution>  
+						</executions>  
+					</plugin>     
 				</plugins> 
 			</build> 
 		</profile>
@@ -461,5 +443,5 @@
 			<version>${lombok}</version>
 			<optional>true</optional>
 		</dependency>
-	</dependencies> 
+	</dependencies>
 </project>
