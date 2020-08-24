@@ -22,7 +22,7 @@
 		<maven-source-plugin>3.2.1</maven-source-plugin>
 		<maven-javadoc-plugin>3.2.0</maven-javadoc-plugin>
 		<maven-gpg-plugin>1.6</maven-gpg-plugin>
-		<maven-resources-plugin>3.1.0</maven-resources-plugin>
+		<maven-resources-plugin>3.2.0</maven-resources-plugin>
 		<maven-assembly-plugin>3.3.0</maven-assembly-plugin>
 		<maven-shade-plugin>3.2.4</maven-shade-plugin>
 		<maven-jar-plugin>3.2.0</maven-jar-plugin>
@@ -31,7 +31,7 @@
 		<maven-surefire-plugin>2.22.2</maven-surefire-plugin>
 		<maven-clean-plugin>3.1.0</maven-clean-plugin>
 		<maven-install-plugin>2.5.2</maven-install-plugin>
-		<versions-maven-plugin>2.7</versions-maven-plugin>
+		<versions-maven-plugin>2.8.1</versions-maven-plugin>
 		<nexus-staging-maven-plugin>1.6.8</nexus-staging-maven-plugin> 
 	</properties>
 
@@ -391,6 +391,19 @@
 					</plugin>
 				</plugins>
 			</build>
+		</profile>
+		<profile>
+			<id>weicoder</id>
+			<distributionManagement>
+				 <repository>
+					<id>weicoder</id> 
+					<url>http://maven.weicoder.com/nexus/content/repositories/releases/</url>
+				</repository>
+				<snapshotRepository>
+					<id>weicoder</id> 
+					<url>http://maven.weicoder.com/nexus/content/repositories/snapshots/</url>
+				</snapshotRepository> 
+			</distributionManagement> 
 		</profile>
 		<profile>
 			<id>tomcat</id>
