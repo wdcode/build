@@ -15,9 +15,9 @@
 		<project.build.sourceEncoding>${encoding}</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>${encoding}</project.reporting.outputEncoding>
 		<javaee-api>8.0.1</javaee-api> 
-		<jetty-maven-plugin>9.4.31.v20200723</jetty-maven-plugin>
-		<lombok>1.18.12</lombok>
-		<smart-doc-maven-plugin>1.1.7</smart-doc-maven-plugin>  
+		<jetty-maven-plugin>11.0.2</jetty-maven-plugin>
+		<lombok>1.18.20</lombok>
+		<smart-doc-maven-plugin>2.1.1</smart-doc-maven-plugin>  
 		<maven-compiler-plugin>3.8.1</maven-compiler-plugin>
 		<maven-source-plugin>3.2.1</maven-source-plugin>
 		<maven-javadoc-plugin>3.2.0</maven-javadoc-plugin>
