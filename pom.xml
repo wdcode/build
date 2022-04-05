@@ -2,7 +2,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.weicoder</groupId>
 	<artifactId>build</artifactId>
-	<version>1.9</version>
+	<version>1.9.1</version>
 	<packaging>pom</packaging>
 	<name>wdcode</name>
 	<description>java tools</description>
@@ -14,22 +14,23 @@
 		<project.build.sourceEncoding>${encoding}</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>${encoding}</project.reporting.outputEncoding>
 		<javaee-api>8.0.1</javaee-api>  
-		<smart-doc-maven-plugin>2.3.7</smart-doc-maven-plugin>  
-		<maven-compiler-plugin>3.9.0</maven-compiler-plugin>
+		<lombok>1.18.22</lombok>
+		<smart-doc-maven-plugin>2.4.2</smart-doc-maven-plugin>  
+		<maven-compiler-plugin>3.10.1</maven-compiler-plugin>
 		<maven-source-plugin>3.2.1</maven-source-plugin>
-		<maven-javadoc-plugin>3.3.1</maven-javadoc-plugin>
+		<maven-javadoc-plugin>3.3.2</maven-javadoc-plugin>
 		<maven-gpg-plugin>3.0.1</maven-gpg-plugin>
 		<maven-resources-plugin>3.2.0</maven-resources-plugin>
 		<maven-assembly-plugin>3.3.0</maven-assembly-plugin>
-		<maven-shade-plugin>3.2.4</maven-shade-plugin>
+		<maven-shade-plugin>3.3.0</maven-shade-plugin>
 		<maven-jar-plugin>3.2.2</maven-jar-plugin>
 		<maven-war-plugin>3.3.2</maven-war-plugin>
-		<maven-dependency-plugin>3.2.0</maven-dependency-plugin>
+		<maven-dependency-plugin>3.3.0</maven-dependency-plugin>
 		<maven-surefire-plugin>2.22.2</maven-surefire-plugin>
-		<maven-clean-plugin>3.1.0</maven-clean-plugin>
+		<maven-clean-plugin>3.2.0</maven-clean-plugin>
 		<maven-install-plugin>2.5.2</maven-install-plugin>
-		<versions-maven-plugin>2.9.0</versions-maven-plugin>
-		<nexus-staging-maven-plugin>1.6.8</nexus-staging-maven-plugin> 
+		<versions-maven-plugin>2.10.0</versions-maven-plugin>
+		<nexus-staging-maven-plugin>1.6.12</nexus-staging-maven-plugin> 
 	</properties>
 
 	<licenses>
@@ -439,5 +440,11 @@
 			<version>${javaee-api}</version>
 			<optional>true</optional>
 		</dependency> 
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>${lombok}</version>
+			<optional>true</optional>
+		</dependency>
 	</dependencies>
 </project>
