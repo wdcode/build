@@ -15,6 +15,7 @@
 		<project.reporting.outputEncoding>${encoding}</project.reporting.outputEncoding> 
 		<jakartaee-api>9.1.0</jakartaee-api>
 		<lombok>1.18.22</lombok>
+		<junit>4.13.2</junit>
 		<smart-doc-maven-plugin>2.4.2</smart-doc-maven-plugin>  
 		<maven-compiler-plugin>3.10.1</maven-compiler-plugin>
 		<maven-source-plugin>3.2.1</maven-source-plugin>
@@ -415,6 +416,12 @@
 			<artifactId>lombok</artifactId>
 			<version>${lombok}</version>
 			<optional>true</optional>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>${junit}</version>
+			<scope>test</scope>
 		</dependency>
 	</dependencies>
 </project>
