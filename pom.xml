@@ -2,7 +2,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.weicoder</groupId>
 	<artifactId>build</artifactId>
-	<version>2.0</version>
+	<version>2.1</version>
 	<packaging>pom</packaging>
 	<name>wdcode</name>
 	<description>java tools</description>
@@ -14,9 +14,10 @@
 		<project.build.sourceEncoding>${encoding}</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>${encoding}</project.reporting.outputEncoding> 
 		<jakartaee-api>9.1.0</jakartaee-api>
-		<lombok>1.18.22</lombok>
+		<lombok>1.18.24</lombok>
 		<junit>4.13.2</junit>
-		<smart-doc-maven-plugin>2.4.2</smart-doc-maven-plugin>  
+		<junit-jupiter>5.8.2</junit-jupiter>
+		<smart-doc-maven-plugin>2.4.3</smart-doc-maven-plugin>  
 		<maven-compiler-plugin>3.10.1</maven-compiler-plugin>
 		<maven-source-plugin>3.2.1</maven-source-plugin>
 		<maven-javadoc-plugin>3.3.2</maven-javadoc-plugin>
@@ -421,6 +422,12 @@
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<version>${junit}</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter-engine</artifactId>
+			<version>${junit-jupiter}</version>
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
