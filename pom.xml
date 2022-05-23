@@ -372,8 +372,9 @@
 						<configuration>
 							<serverId>oss</serverId>
 							<nexusUrl>https://oss.sonatype.org/</nexusUrl>
-							<autoReleaseAfterClose>true</autoReleaseAfterClose>
-							<stagingProgressTimeoutMinutes>20</stagingProgressTimeoutMinutes>
+							<autoReleaseAfterClose>true</autoReleaseAfterClose> 
+							<stagingProgressTimeoutMinutes>60</stagingProgressTimeoutMinutes> 
+							<stagingProgressPauseDurationSeconds>60</stagingProgressPauseDurationSeconds>  
 						</configuration>
 					</plugin>
 					<plugin>
