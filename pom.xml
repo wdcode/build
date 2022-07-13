@@ -17,13 +17,13 @@
 		<lombok>1.18.24</lombok>
 		<junit>4.13.2</junit>
 		<junit-jupiter>5.8.2</junit-jupiter>
-		<smart-doc-maven-plugin>2.4.6</smart-doc-maven-plugin>  
+		<smart-doc-maven-plugin>2.4.8</smart-doc-maven-plugin>  
 		<maven-compiler-plugin>3.10.1</maven-compiler-plugin>
 		<maven-source-plugin>3.2.1</maven-source-plugin>
 		<maven-javadoc-plugin>3.4.0</maven-javadoc-plugin>
 		<maven-gpg-plugin>3.0.1</maven-gpg-plugin>
 		<maven-resources-plugin>3.2.0</maven-resources-plugin>
-		<maven-assembly-plugin>3.3.0</maven-assembly-plugin>
+		<maven-assembly-plugin>3.4.1</maven-assembly-plugin>
 		<maven-shade-plugin>3.3.0</maven-shade-plugin>
 		<maven-jar-plugin>3.2.2</maven-jar-plugin>
 		<maven-war-plugin>3.3.2</maven-war-plugin>
