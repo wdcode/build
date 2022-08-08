@@ -2,7 +2,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.weicoder</groupId>
 	<artifactId>build</artifactId>
-	<version>2.2.1</version>
+	<version>2.3</version>
 	<packaging>pom</packaging>
 	<name>wdcode</name>
 	<description>java tools</description>
@@ -17,21 +17,21 @@
 		<javaee-api>8.0.1</javaee-api> 
 		<lombok>1.18.24</lombok>
 		<junit>4.13.2</junit>
-		<junit-jupiter>5.8.2</junit-jupiter>
-		<smart-doc-maven-plugin>2.4.8</smart-doc-maven-plugin>  
+		<junit-jupiter>5.9.0</junit-jupiter>
+		<smart-doc-maven-plugin>2.4.9</smart-doc-maven-plugin>  
 		<maven-compiler-plugin>3.10.1</maven-compiler-plugin>
 		<maven-source-plugin>3.2.1</maven-source-plugin>
 		<maven-javadoc-plugin>3.4.0</maven-javadoc-plugin>
 		<maven-gpg-plugin>3.0.1</maven-gpg-plugin>
-		<maven-resources-plugin>3.2.0</maven-resources-plugin>
-		<maven-assembly-plugin>3.4.1</maven-assembly-plugin>
+		<maven-resources-plugin>3.3.0</maven-resources-plugin>
+		<maven-assembly-plugin>3.4.2</maven-assembly-plugin>
 		<maven-shade-plugin>3.3.0</maven-shade-plugin>
 		<maven-jar-plugin>3.2.2</maven-jar-plugin>
 		<maven-war-plugin>3.3.2</maven-war-plugin>
 		<maven-dependency-plugin>3.3.0</maven-dependency-plugin>
 		<maven-surefire-plugin>2.22.2</maven-surefire-plugin>
 		<maven-clean-plugin>3.2.0</maven-clean-plugin>
-		<maven-install-plugin>3.0.0</maven-install-plugin>
+		<maven-install-plugin>3.0.1</maven-install-plugin>
 		<versions-maven-plugin>2.11.0</versions-maven-plugin>
 		<nexus-staging-maven-plugin>1.6.13</nexus-staging-maven-plugin> 
 	</properties>
