@@ -2,7 +2,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.weicoder</groupId>
 	<artifactId>build</artifactId>
-	<version>2.3</version>
+	<version>2.4</version>
 	<packaging>pom</packaging>
 	<name>wdcode</name>
 	<description>java tools</description>
@@ -13,19 +13,18 @@
 		<jdk>17</jdk>
 		<project.build.sourceEncoding>${encoding}</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>${encoding}</project.reporting.outputEncoding> 
-		<jakartaee-api>9.1.0</jakartaee-api>
-		<javaee-api>8.0.1</javaee-api> 
-		<lombok>1.18.24</lombok>
-		<junit>4.13.2</junit>
-		<junit-jupiter>5.9.0</junit-jupiter>
+		<jakartaee-api>RELEASE</jakartaee-api><!-- 9.1.0 -->
+		<javaee-api>RELEASE</javaee-api><!-- 8.0.1 -->
+		<lombok>RELEASE</lombok><!-- 1.18.24 -->
+		<junit>RELEASE</junit><!-- 4.13.2 -->
+		<junit-jupiter>RELEASE</junit-jupiter><!-- 5.9.0 -->
 		<smart-doc-maven-plugin>2.4.9</smart-doc-maven-plugin>  
 		<maven-compiler-plugin>3.10.1</maven-compiler-plugin>
 		<maven-source-plugin>3.2.1</maven-source-plugin>
 		<maven-javadoc-plugin>3.4.0</maven-javadoc-plugin>
 		<maven-gpg-plugin>3.0.1</maven-gpg-plugin>
 		<maven-resources-plugin>3.3.0</maven-resources-plugin>
-		<maven-assembly-plugin>3.4.2</maven-assembly-plugin>
-		<maven-shade-plugin>3.3.0</maven-shade-plugin>
+		<maven-assembly-plugin>3.4.2</maven-assembly-plugin> 
 		<maven-jar-plugin>3.2.2</maven-jar-plugin>
 		<maven-war-plugin>3.3.2</maven-war-plugin>
 		<maven-dependency-plugin>3.3.0</maven-dependency-plugin>
@@ -136,6 +135,7 @@
 						<nonFilteredFileExtension>xlsx</nonFilteredFileExtension>
 					</nonFilteredFileExtensions>
 				</configuration>
+				<!-- -->
 				<executions>
 					<execution>
 						<id>copy-resources</id>
@@ -143,11 +143,9 @@
 						<goals>
 							<goal>copy-resources</goal>
 						</goals>
-						<configuration>
-							<!-- 覆盖原有文件 -->
+						<configuration> 
 							<overwrite>true</overwrite>
-							<outputDirectory>${project.build.outputDirectory}</outputDirectory>
-							<!-- 待处理的资源定义 -->
+							<outputDirectory>${project.build.outputDirectory}</outputDirectory> 
 							<resources>
 								<resource>
 									<directory>src/main/java</directory>
@@ -164,6 +162,7 @@
 						</configuration>
 					</execution>
 				</executions>
+				
 			</plugin>
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
@@ -268,6 +267,17 @@
 		<profile>
 			<id>jar</id>
 			<build>
+			<!--
+				<resources>
+					<resource>
+						<directory>src/main/resources</directory>
+						<filtering>true</filtering>
+						<excludes>
+							<exclude>*</exclude>
+						</excludes>
+					</resource>
+				</resources>
+			-->
 				<plugins>
 					<plugin>
 						<groupId>org.apache.maven.plugins</groupId>
@@ -299,7 +309,7 @@
 								</configuration>
 							</execution>
 						</executions>
-					</plugin>
+					</plugin>					
 				</plugins>
 			</build> 
 		</profile> 
