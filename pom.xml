@@ -18,13 +18,12 @@
 		<lombok>RELEASE</lombok><!-- 1.18.24 -->
 		<junit>RELEASE</junit><!-- 4.13.2 -->
 		<junit-jupiter>RELEASE</junit-jupiter><!-- 5.9.0 -->
-		<smart-doc-maven-plugin>2.4.9</smart-doc-maven-plugin>  
+		<smart-doc-maven-plugin>2.5.1</smart-doc-maven-plugin>  
 		<maven-compiler-plugin>3.10.1</maven-compiler-plugin>
 		<maven-source-plugin>3.2.1</maven-source-plugin>
-		<maven-javadoc-plugin>3.4.0</maven-javadoc-plugin>
+		<maven-javadoc-plugin>3.4.1</maven-javadoc-plugin>
 		<maven-gpg-plugin>3.0.1</maven-gpg-plugin>
 		<maven-resources-plugin>3.3.0</maven-resources-plugin>
-		<maven-assembly-plugin>3.4.2</maven-assembly-plugin> 
 		<maven-jar-plugin>3.2.2</maven-jar-plugin>
 		<maven-war-plugin>3.3.2</maven-war-plugin>
 		<maven-dependency-plugin>3.3.0</maven-dependency-plugin>
@@ -134,8 +133,8 @@
 					<nonFilteredFileExtensions>
 						<nonFilteredFileExtension>xlsx</nonFilteredFileExtension>
 					</nonFilteredFileExtensions>
-				</configuration>
-				<!-- -->
+				</configuration> 
+				<!--
 				<executions>
 					<execution>
 						<id>copy-resources</id>
@@ -162,7 +161,7 @@
 						</configuration>
 					</execution>
 				</executions>
-				
+				-->
 			</plugin>
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
@@ -267,17 +266,18 @@
 		<profile>
 			<id>jar</id>
 			<build>
-			<!--
 				<resources>
 					<resource>
 						<directory>src/main/resources</directory>
 						<filtering>true</filtering>
+						<targetPath>${project.build.directory}/</targetPath>
+						<!--
 						<excludes>
 							<exclude>*</exclude>
 						</excludes>
+						-->
 					</resource>
 				</resources>
-			-->
 				<plugins>
 					<plugin>
 						<groupId>org.apache.maven.plugins</groupId>
@@ -290,60 +290,35 @@
 									<classpathPrefix>lib/</classpathPrefix>
 									<mainClass>com.weicoder.common.Main</mainClass>
 								</manifest>
+								<manifestEntries>
+									<Class-Path>${project.build.directory}/</Class-Path>
+								</manifestEntries>
 							</archive>
 						</configuration>
 					</plugin>
 					<plugin>
 						<groupId>org.apache.maven.plugins</groupId>
 						<artifactId>maven-dependency-plugin</artifactId>
-						<version>${maven-dependency-plugin}</version> <!--$NO-MVN-MAN-VER$-->
+						<version>${maven-dependency-plugin}</version>
 						<executions>
 							<execution>
 								<id>copy</id>
-								<phase>compile</phase>
+								<phase>package</phase>
 								<goals>
 									<goal>copy-dependencies</goal>
 								</goals>
 								<configuration>
 									<outputDirectory>${project.build.directory}/lib</outputDirectory>
+									<includeScope>compile</includeScope>
+									<excludeGroupIds>junit,org.junit,jakarta.platform</excludeGroupIds>
+									<excludeArtifactIds>lombok,javaee-api</excludeArtifactIds>
 								</configuration>
 							</execution>
 						</executions>
 					</plugin>					
 				</plugins>
 			</build> 
-		</profile> 
-		<profile>
-			<id>assembly</id>
-			<build>
-				<plugins>
-					<plugin>  
-						<groupId>org.apache.maven.plugins</groupId>  
-						<artifactId>maven-assembly-plugin</artifactId>  
-						<version>${maven-assembly-plugin}</version>  
-						<configuration>  
-							<archive>  
-								<manifest>  
-									<mainClass>com.weicoder.common.Main</mainClass>  
-								</manifest>  
-							</archive>  
-							<descriptorRefs>  
-								<descriptorRef>jar-with-dependencies</descriptorRef>  
-							</descriptorRefs>  
-						</configuration>  
-						<executions>  
-							<execution>  
-								<id>make-assembly</id>  
-								<phase>package</phase>  
-								<goals>  
-									<goal>single</goal>  
-								</goals>  
-							</execution> 
-						</executions>  
-					</plugin>  
-				</plugins>
-			</build> 
-		</profile>
+		</profile>		
 		<profile>
 			<id>release</id>
 			<distributionManagement>
@@ -425,19 +400,22 @@
 			<groupId>jakarta.platform</groupId>
 			<artifactId>jakarta.jakartaee-api</artifactId>
 			<version>${jakartaee-api}</version>
-			<optional>true</optional>
+			<optional>true</optional> 
+			<scope>provided</scope>
 		</dependency> 
 		<dependency>
 			<groupId>javax</groupId>
 			<artifactId>javaee-api</artifactId>
 			<version>${javaee-api}</version>
-			<optional>true</optional>
-		</dependency> 
+			<optional>true</optional> 
+			<scope>provided</scope>
+		</dependency>
  		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
 			<version>${lombok}</version>
 			<optional>true</optional>
+			<scope>provided</scope>
 		</dependency>
 		<dependency>
 			<groupId>junit</groupId>
