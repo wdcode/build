@@ -15,7 +15,7 @@
 		<project.reporting.outputEncoding>${encoding}</project.reporting.outputEncoding> 
 		<jakartaee-api>RELEASE</jakartaee-api>
 		<lombok>RELEASE</lombok>
-		<junit-jupiter>RELEASE</junit-jupiter>		  
+		<junit-jupiter>RELEASE</junit-jupiter>
 		<maven-compiler-plugin>3.10.1</maven-compiler-plugin>
 		<maven-source-plugin>3.2.1</maven-source-plugin>
 		<maven-javadoc-plugin>3.4.1</maven-javadoc-plugin>
@@ -311,25 +311,12 @@
 			<optional>true</optional> 
 			<scope>provided</scope>
 		</dependency> 
-		<dependency>
-			<groupId>javax</groupId>
-			<artifactId>javaee-api</artifactId>
-			<version>${javaee-api}</version>
-			<optional>true</optional> 
-			<scope>provided</scope>
-		</dependency>
  		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
 			<version>${lombok}</version>
 			<optional>true</optional>
 			<scope>provided</scope>
-		</dependency>
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>${junit}</version>
-			<scope>test</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.junit.jupiter</groupId>
