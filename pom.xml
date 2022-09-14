@@ -218,7 +218,7 @@
 								<configuration>
 									<outputDirectory>${project.build.directory}/lib</outputDirectory>
 									<includeScope>compile</includeScope>
-									<excludeGroupIds>junit,org.junit,jakarta.platform</excludeGroupIds>
+									<excludeGroupIds>junit,org.junit,jakarta,jakarta.platform</excludeGroupIds>
 									<excludeArtifactIds>lombok,javaee-api</excludeArtifactIds>
 								</configuration>
 							</execution>
