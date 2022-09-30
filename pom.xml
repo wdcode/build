@@ -21,7 +21,7 @@
 		<maven-javadoc-plugin>3.4.1</maven-javadoc-plugin>
 		<maven-gpg-plugin>3.0.1</maven-gpg-plugin>
 		<maven-resources-plugin>3.3.0</maven-resources-plugin>
-		<maven-jar-plugin>3.2.2</maven-jar-plugin>
+		<maven-jar-plugin>3.3.0</maven-jar-plugin>
 		<maven-war-plugin>3.3.2</maven-war-plugin>
 		<maven-dependency-plugin>3.3.0</maven-dependency-plugin>
 		<maven-surefire-plugin>2.22.2</maven-surefire-plugin>
@@ -218,8 +218,8 @@
 								<configuration>
 									<outputDirectory>${project.build.directory}/lib</outputDirectory>
 									<includeScope>compile</includeScope>
-									<excludeGroupIds>junit,org.junit,jakarta,jakarta.platform</excludeGroupIds>
-									<excludeArtifactIds>lombok,javaee-api</excludeArtifactIds>
+									<excludeGroupIds>junit,jakarta</excludeGroupIds>
+									<excludeArtifactIds>lombok</excludeArtifactIds>
 								</configuration>
 							</execution>
 						</executions>
