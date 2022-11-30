@@ -26,7 +26,7 @@
 		<maven-dependency-plugin>3.3.0</maven-dependency-plugin>
 		<maven-surefire-plugin>2.22.2</maven-surefire-plugin>
 		<maven-clean-plugin>3.2.0</maven-clean-plugin>
-		<maven-install-plugin>3.0.1</maven-install-plugin>
+		<maven-install-plugin>3.1.0</maven-install-plugin>
 		<versions-maven-plugin>2.13.0</versions-maven-plugin>
 		<nexus-staging-maven-plugin>1.6.13</nexus-staging-maven-plugin> 
 	</properties>
