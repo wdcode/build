@@ -17,17 +17,17 @@
 		<lombok>RELEASE</lombok>
 		<junit-jupiter>RELEASE</junit-jupiter>
 		<maven-compiler-plugin>3.11.0</maven-compiler-plugin>
-		<maven-source-plugin>3.2.1</maven-source-plugin>
+		<maven-source-plugin>3.3.0</maven-source-plugin>
 		<maven-javadoc-plugin>3.5.0</maven-javadoc-plugin>
-		<maven-gpg-plugin>3.0.1</maven-gpg-plugin>
+		<maven-gpg-plugin>3.1.0</maven-gpg-plugin>
 		<maven-resources-plugin>3.3.1</maven-resources-plugin>
 		<maven-jar-plugin>3.3.0</maven-jar-plugin>
-		<maven-war-plugin>3.3.2</maven-war-plugin>
-		<maven-dependency-plugin>3.5.0</maven-dependency-plugin>
-		<maven-surefire-plugin>3.0.0</maven-surefire-plugin>
+		<maven-war-plugin>3.4.0</maven-war-plugin>
+		<maven-dependency-plugin>3.6.0</maven-dependency-plugin>
+		<maven-surefire-plugin>3.1.2</maven-surefire-plugin>
 		<maven-clean-plugin>3.2.0</maven-clean-plugin>
 		<maven-install-plugin>3.1.1</maven-install-plugin>
-		<versions-maven-plugin>2.15.0</versions-maven-plugin>
+		<versions-maven-plugin>2.16.0</versions-maven-plugin>
 		<nexus-staging-maven-plugin>1.6.13</nexus-staging-maven-plugin> 
 	</properties>
 
