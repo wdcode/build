@@ -2,7 +2,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.weicoder</groupId>
 	<artifactId>build</artifactId>
-	<version>2.5</version>
+	<version>2.5.1</version>
 	<packaging>pom</packaging>
 	<name>wdcode</name>
 	<description>java tools</description>
@@ -25,7 +25,7 @@
 		<maven-war-plugin>3.4.0</maven-war-plugin>
 		<maven-dependency-plugin>3.6.0</maven-dependency-plugin>
 		<maven-surefire-plugin>3.1.2</maven-surefire-plugin>
-		<maven-clean-plugin>3.2.0</maven-clean-plugin>
+		<maven-clean-plugin>3.3.1</maven-clean-plugin>
 		<maven-install-plugin>3.1.1</maven-install-plugin>
 		<versions-maven-plugin>2.16.0</versions-maven-plugin>
 		<nexus-staging-maven-plugin>1.6.13</nexus-staging-maven-plugin> 
