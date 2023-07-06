@@ -18,6 +18,7 @@
 		<junit-jupiter>RELEASE</junit-jupiter>
 		<maven-compiler-plugin>3.11.0</maven-compiler-plugin>
 		<maven-source-plugin>3.3.0</maven-source-plugin>
+		<maven-release-plugin>3.0.1</maven-release-plugin>
 		<maven-javadoc-plugin>3.5.0</maven-javadoc-plugin>
 		<maven-gpg-plugin>3.1.0</maven-gpg-plugin>
 		<maven-resources-plugin>3.3.1</maven-resources-plugin>
@@ -114,12 +115,21 @@
 				<version>${maven-source-plugin}</version>
 				<executions>
 					<execution>
+						<id>parent-sources</id>
 						<phase>package</phase>
 						<goals>
 							<goal>jar-no-fork</goal>
-						</goals>
+						</goals> 
 					</execution>
 				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-release-plugin</artifactId> 
+				<version>${maven-release-plugin}</version>
+				<configuration>
+						<useReleaseProfile>false</useReleaseProfile> 
+				</configuration>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
