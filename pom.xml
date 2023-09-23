@@ -2,7 +2,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.weicoder</groupId>
 	<artifactId>build</artifactId>
-	<version>2.5.1</version>
+	<version>2.6</version>
 	<packaging>pom</packaging>
 	<name>wdcode</name>
 	<description>java tools</description>
@@ -10,7 +10,7 @@
 
 	<properties>
 		<encoding>UTF-8</encoding> 
-		<jdk>17</jdk>
+		<jdk>21</jdk>
 		<project.build.sourceEncoding>${encoding}</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>${encoding}</project.reporting.outputEncoding> 
 		<jakartaee-api>RELEASE</jakartaee-api>
@@ -19,7 +19,7 @@
 		<maven-compiler-plugin>3.11.0</maven-compiler-plugin>
 		<maven-source-plugin>3.3.0</maven-source-plugin>
 		<maven-release-plugin>3.0.1</maven-release-plugin>
-		<maven-javadoc-plugin>3.5.0</maven-javadoc-plugin>
+		<maven-javadoc-plugin>3.6.0</maven-javadoc-plugin>
 		<maven-gpg-plugin>3.1.0</maven-gpg-plugin>
 		<maven-resources-plugin>3.3.1</maven-resources-plugin>
 		<maven-jar-plugin>3.3.0</maven-jar-plugin>
@@ -28,7 +28,7 @@
 		<maven-surefire-plugin>3.1.2</maven-surefire-plugin>
 		<maven-clean-plugin>3.3.1</maven-clean-plugin>
 		<maven-install-plugin>3.1.1</maven-install-plugin>
-		<versions-maven-plugin>2.16.0</versions-maven-plugin>
+		<versions-maven-plugin>2.16.1</versions-maven-plugin>
 		<nexus-staging-maven-plugin>1.6.13</nexus-staging-maven-plugin> 
 	</properties>
 
