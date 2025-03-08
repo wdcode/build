@@ -15,8 +15,8 @@
 		<project.reporting.outputEncoding>${encoding}</project.reporting.outputEncoding> 
 		<jakartaee-api>10.0.0</jakartaee-api>
 		<lombok>1.18.36</lombok>
-		<junit-jupiter>5.11.4</junit-jupiter>
-		<maven-compiler-plugin>3.13.0</maven-compiler-plugin>
+		<junit-jupiter>5.12.0</junit-jupiter>
+		<maven-compiler-plugin>3.14.0</maven-compiler-plugin>
 		<maven-source-plugin>3.3.1</maven-source-plugin>
 		<maven-release-plugin>3.1.1</maven-release-plugin>
 		<maven-javadoc-plugin>3.11.2</maven-javadoc-plugin>
@@ -26,7 +26,7 @@
 		<maven-war-plugin>3.4.0</maven-war-plugin>
 		<maven-dependency-plugin>3.8.1</maven-dependency-plugin>
 		<maven-surefire-plugin>3.5.2</maven-surefire-plugin>
-		<maven-clean-plugin>3.4.0</maven-clean-plugin>
+		<maven-clean-plugin>3.4.1</maven-clean-plugin>
 		<maven-install-plugin>3.1.3</maven-install-plugin>
 		<versions-maven-plugin>2.18.0</versions-maven-plugin>
 		<nexus-staging-maven-plugin>1.7.0</nexus-staging-maven-plugin> 
