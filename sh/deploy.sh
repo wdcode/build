@@ -1,1 +1,2 @@
-mvn clean install deploy -T8 -Prelease -Dgpg.passphrase=$1
+export GPG_TTY=$(tty)
+mvn clean deploy -Prelease -Dgpg.passphrase=$1
