@@ -1,1 +1,0 @@
-sudo bless --folder "$HOME/app/System/Library/CoreServices" --bootefi --create-snapshot
