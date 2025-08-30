@@ -15,13 +15,13 @@
 		<project.reporting.outputEncoding>${encoding}</project.reporting.outputEncoding> 
 		<jakartaee-api>11.0.0</jakartaee-api>
 		<lombok>1.18.38</lombok>
-		<junit-jupiter>5.13.2</junit-jupiter>
+		<junit-jupiter>5.13.4</junit-jupiter>
 		<central-publishing-maven-plugin>0.8.0</central-publishing-maven-plugin>
 		<maven-compiler-plugin>3.14.0</maven-compiler-plugin>
 		<maven-source-plugin>3.3.1</maven-source-plugin>
 		<maven-release-plugin>3.1.1</maven-release-plugin>
-		<maven-javadoc-plugin>3.11.2</maven-javadoc-plugin>
-		<maven-gpg-plugin>3.2.7</maven-gpg-plugin>
+		<maven-javadoc-plugin>3.11.3</maven-javadoc-plugin>
+		<maven-gpg-plugin>3.2.8</maven-gpg-plugin>
 		<maven-resources-plugin>3.3.1</maven-resources-plugin>
 		<maven-jar-plugin>3.4.2</maven-jar-plugin>
 		<maven-war-plugin>3.4.0</maven-war-plugin>
